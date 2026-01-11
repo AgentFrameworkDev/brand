@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <!-- Main cyan to purple gradient -->
+    <linearGradient id="mainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D4FF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4B7BF5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9B4DCA;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Individual gradients for each figure -->
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D4FF" />
+      <stop offset="100%" style="stop-color:#4B7BF5" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#20DAFF" />
+      <stop offset="100%" style="stop-color:#6B8BF5" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4B7BF5" />
+      <stop offset="100%" style="stop-color:#7B5DC9" />
+    </linearGradient>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6B8BF5" />
+      <stop offset="100%" style="stop-color:#9B4DCA" />
+    </linearGradient>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B6DD9" />
+      <stop offset="100%" style="stop-color:#BB5DDA" />
+    </linearGradient>
+    <linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00C4EF" />
+      <stop offset="100%" style="stop-color:#5B6BE5" />
+    </linearGradient>
+    
+    <!-- Background gradient for inner circle -->
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1a2744" />
+      <stop offset="100%" style="stop-color:#0a0f18" />
+    </radialGradient>
+    
+    <!-- Center glow -->
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+      <stop offset="40%" style="stop-color:#4B7BF5;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#4B7BF5;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Outer ring gradient -->
+    <linearGradient id="ringGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#152238;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Text paths for circular text - ring center is at r=157.5 (between inner r=120 and outer r=195) -->
+    <path id="topTextPath" d="M 42,200 A 158,158 0 0,1 358,200" fill="none"/>
+    <path id="bottomTextPath" d="M 42,200 A 158,158 0 0,0 358,200" fill="none"/>
+  </defs>
+  
+  <!-- Outer ring background -->
+  <circle cx="200" cy="200" r="195" fill="url(#ringGradient)" stroke="#0d1421" stroke-width="2"/>
+  
+
+  
+  <!-- White inner ring border -->
+  <circle cx="200" cy="200" r="120" fill="none" stroke="#ffffff" stroke-width="6"/>
+  
+  <!-- Inner circle background -->
+  <circle cx="200" cy="200" r="115" fill="url(#bgGradient)"/>
+  
+  <!-- Subtle connection ring -->
+  <circle cx="200" cy="200" r="62" fill="none" stroke="url(#mainGrad)" stroke-width="1.5" opacity="0.2"/>
+  
+  <!-- Six abstract human figures arranged in a circle -->
+  <g filter="url(#glow)">
+    
+    <!-- Figure 1 - Top -->
+    <g transform="translate(200, 200) rotate(0) translate(0, -62)">
+      <circle cx="0" cy="0" r="12" fill="url(#grad1)"/>
+      <path d="M0,12 Q0,24 0,34" stroke="url(#grad1)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M-10,22 Q-18,27 -27,24" stroke="url(#grad1)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <path d="M10,22 Q18,27 27,24" stroke="url(#grad1)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <circle cx="-3" cy="-3" r="4" fill="#ffffff" opacity="0.5"/>
+    </g>
+    
+    <!-- Figure 2 - Top Right -->
+    <g transform="translate(200, 200) rotate(60) translate(0, -62)">
+      <circle cx="0" cy="0" r="12" fill="url(#grad2)"/>
+      <path d="M0,12 Q0,24 0,34" stroke="url(#grad2)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M-10,22 Q-18,27 -27,24" stroke="url(#grad2)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <path d="M10,22 Q18,27 27,24" stroke="url(#grad2)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <circle cx="-3" cy="-3" r="4" fill="#ffffff" opacity="0.5"/>
+    </g>
+    
+    <!-- Figure 3 - Bottom Right -->
+    <g transform="translate(200, 200) rotate(120) translate(0, -62)">
+      <circle cx="0" cy="0" r="12" fill="url(#grad3)"/>
+      <path d="M0,12 Q0,24 0,34" stroke="url(#grad3)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M-10,22 Q-18,27 -27,24" stroke="url(#grad3)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <path d="M10,22 Q18,27 27,24" stroke="url(#grad3)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <circle cx="-3" cy="-3" r="4" fill="#ffffff" opacity="0.5"/>
+    </g>
+    
+    <!-- Figure 4 - Bottom -->
+    <g transform="translate(200, 200) rotate(180) translate(0, -62)">
+      <circle cx="0" cy="0" r="12" fill="url(#grad4)"/>
+      <path d="M0,12 Q0,24 0,34" stroke="url(#grad4)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M-10,22 Q-18,27 -27,24" stroke="url(#grad4)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <path d="M10,22 Q18,27 27,24" stroke="url(#grad4)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <circle cx="-3" cy="-3" r="4" fill="#ffffff" opacity="0.5"/>
+    </g>
+    
+    <!-- Figure 5 - Bottom Left -->
+    <g transform="translate(200, 200) rotate(240) translate(0, -62)">
+      <circle cx="0" cy="0" r="12" fill="url(#grad5)"/>
+      <path d="M0,12 Q0,24 0,34" stroke="url(#grad5)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M-10,22 Q-18,27 -27,24" stroke="url(#grad5)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <path d="M10,22 Q18,27 27,24" stroke="url(#grad5)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <circle cx="-3" cy="-3" r="4" fill="#ffffff" opacity="0.5"/>
+    </g>
+    
+    <!-- Figure 6 - Top Left -->
+    <g transform="translate(200, 200) rotate(300) translate(0, -62)">
+      <circle cx="0" cy="0" r="12" fill="url(#grad6)"/>
+      <path d="M0,12 Q0,24 0,34" stroke="url(#grad6)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M-10,22 Q-18,27 -27,24" stroke="url(#grad6)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <path d="M10,22 Q18,27 27,24" stroke="url(#grad6)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <circle cx="-3" cy="-3" r="4" fill="#ffffff" opacity="0.5"/>
+    </g>
+  </g>
+  
+  <!-- Connection lines between neighbors -->
+  <g stroke="url(#mainGrad)" stroke-width="2" opacity="0.35" filter="url(#softGlow)">
+    <line x1="200" y1="138" x2="254" y2="169"/>
+    <line x1="254" y1="169" x2="254" y2="231"/>
+    <line x1="254" y1="231" x2="200" y2="262"/>
+    <line x1="200" y1="262" x2="146" y2="231"/>
+    <line x1="146" y1="231" x2="146" y2="169"/>
+    <line x1="146" y1="169" x2="200" y2="138"/>
+  </g>
+  
+  <!-- Central shared element -->
+  <g filter="url(#glow)">
+    <!-- Central hub -->
+    <circle cx="200" cy="200" r="22" fill="url(#bgGradient)" stroke="url(#mainGrad)" stroke-width="2.5"/>
+    
+    <!-- Code brackets -->
+    <g stroke="url(#mainGrad)" stroke-width="3" fill="none" stroke-linecap="round">
+      <path d="M192,190 L184,200 L192,210"/>
+      <path d="M208,190 L216,200 L208,210"/>
+    </g>
+    
+    <!-- Central dot -->
+    <circle cx="200" cy="200" r="4" fill="url(#mainGrad)"/>
+    <circle cx="200" cy="200" r="2" fill="#ffffff" opacity="0.8"/>
+  </g>
+  
+  <!-- Central glow -->
+  <circle cx="200" cy="200" r="28" fill="url(#centerGlow)" opacity="0.5"/>
+  
+  <!-- Circular text - AGENT FRAMEWORK on top arc -->
+  <text fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" letter-spacing="6" dominant-baseline="middle">
+    <textPath href="#topTextPath" startOffset="50%" text-anchor="middle">AGENT FRAMEWORK</textPath>
+  </text>
+  
+  <!-- Circular text - DEV PROJECT on bottom arc -->
+  <text fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" letter-spacing="6" dominant-baseline="middle">
+    <textPath href="#bottomTextPath" startOffset="50%" text-anchor="middle">DEV PROJECT</textPath>
+  </text>
+</svg>
